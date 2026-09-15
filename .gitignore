@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Environment Variables & Secrets (CRITICAL: Never commit .env files)
+.env
+.env.*
+!.env.example
+*.env
+*.env.local
+*.env.production
+backend/.env
+frontend/.env
+
+# Build outputs
+dist/
+frontend/dist/
+dist-ssr/
+build/
+
+# Operating System files
+.DS_Store
+*/.DS_Store
+Icon?
+Icon\r
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor & IDE directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
