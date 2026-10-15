@@ -1,11 +1,14 @@
 # 🛍️ ShopKart — Full-Stack MERN E-Commerce Platform
 
+[![Deployment](https://img.shields.io/badge/Live_Demo-Vercel-black?logo=vercel)](https://shopkart-frontend-nine.vercel.app)
 [![MERN Stack](https://img.shields.io/badge/Stack-MERN-green.svg)](https://react.dev/)
 [![React 19](https://img.shields.io/badge/React-19.2-blue.svg)](https://react.dev/)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-brightgreen.svg)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-5.2-lightgrey.svg)](https://expressjs.com/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green.svg)](https://www.mongodb.com/atlas)
 [![Razorpay](https://img.shields.io/badge/Payment-Razorpay-blue.svg)](https://razorpay.com/)
+
+> 🌐 **Live Website**: [https://shopkart-frontend-nine.vercel.app](https://shopkart-frontend-nine.vercel.app)
 
 ShopKart is a production-grade, full-stack e-commerce web application engineered with the **MERN** stack (MongoDB, Express.js, React 19, Node.js) and powered by Vite. It implements complete customer authentication, dynamic product catalog management, persistent wishlists, interactive cart operations, and end-to-end checkout with Razorpay payment gateway integration and cryptographic signature verification.
 
