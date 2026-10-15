@@ -1,7 +1,17 @@
 import axios from 'axios';
 
+const getBaseURL = () => {
+    if (import.meta.env.VITE_API_BASE_URL) {
+        return import.meta.env.VITE_API_BASE_URL;
+    }
+    if (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+        return 'https://shopkart-backend-tqp4.onrender.com';
+    }
+    return 'http://localhost:8085';
+};
+
 const API = axios.create({
-    baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8085',
+    baseURL: getBaseURL(),
     withCredentials: true, // Crucial for sending/receiving HttpOnly cookies
     headers: {
         'Content-Type': 'application/json'
