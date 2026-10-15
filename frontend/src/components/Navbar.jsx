@@ -11,10 +11,10 @@ const Navbar = ({ user, setUser }) => {
     const handleLogout = async () => {
         try {
             await logoutCustomer();
-            setUser(null);
-            navigate('/login');
         } catch (err) {
             console.error('Logout error:', err);
+        } finally {
+            localStorage.removeItem('shopkart_token');
             setUser(null);
             navigate('/login');
         }

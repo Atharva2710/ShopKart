@@ -32,8 +32,15 @@ const Login = ({ setUser }) => {
             const response = await loginCustomer(credentials);
 
             if (response.data.success) {
-                const userRes = await getMyProfile();
-                setUser(userRes.data);
+                if (response.data.token) {
+                    localStorage.setItem('shopkart_token', response.data.token);
+                }
+                if (response.data.customer) {
+                    setUser(response.data.customer);
+                } else {
+                    const userRes = await getMyProfile();
+                    setUser(userRes.data);
+                }
                 navigate('/products');
             }
         } catch (err) {

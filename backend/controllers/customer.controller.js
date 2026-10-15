@@ -91,13 +91,18 @@ export const loginCustomer = async (req, res) => {
 
         const token = generateToken(customer._id)
 
-
         res.cookie('token', token, cookieOptions)
-
 
         res.status(200).json({
             success: true,
-            message: 'Login successful'
+            message: 'Login successful',
+            customer: {
+                _id: customer._id,
+                fullName: customer.fullName,
+                email: customer.email,
+                phone: customer.phone
+            },
+            token
         })
 
     } catch (error) {

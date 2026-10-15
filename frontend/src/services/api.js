@@ -18,6 +18,17 @@ const API = axios.create({
     }
 });
 
+// Attach Authorization Bearer token if stored (supports cross-origin Safari/Chrome environments)
+API.interceptors.request.use((config) => {
+    if (typeof window !== 'undefined') {
+        const token = localStorage.getItem('shopkart_token');
+        if (token) {
+            config.headers.Authorization = `Bearer ${token}`;
+        }
+    }
+    return config;
+});
+
 // Authentication APIs (Lab 01 & 02)
 export const registerCustomer = (data) => API.post('/customers/register', data);
 export const loginCustomer = (data) => API.post('/customers/login', data);
